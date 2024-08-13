@@ -1,0 +1,53 @@
+body {
+    background-color: blue;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #1900ff;
+    position: relative;
+}
+
+#car {
+    width: 50px;
+    height: 100px;
+    background-color: rgb(0, 255, 0);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.rain {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #FFF;
+    animation: rain 1s linear infinite;
+}
+
+.obstacle {
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000;
+    position: absolute;
+    top: 0;
+}
+
+@keyframes rain {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(100%);
+    }
+}
+
+.score-value {
+    color: white;
+}
