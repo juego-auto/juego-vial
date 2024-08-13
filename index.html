@@ -2,16 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simulador de Conducción</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="game-container">
-        <div id="car"></div>
-        <div id="score">Puntaje: <span id="score-value">0</span></div>
+    <h1>¿Cuál es la opción correcta?</h1>
+
+    <!-- PANTALLA INICIAL -->
+    <div id="pantalla-inicial">
+        <p>¿A quien deberias cederle el paso?</p>
+        <button class="btn">x</button>
     </div>
-    
-    <script src="script.js"></script>
+
+    <!--PANTALLA DE JUEGO-->
+
+    <div class="pantalla-juego" id="pantalla-juego">
+        <img>
+    </div>
+        <div class="opciones">
+            <div class="opcion" id="op0"></div>
+                <div class="letra" id="l0">A</div>
+                <div class="nombre" id="n0">OPCION A</div>
+        </div>
+        <div class="opciones">
+            <div class="opcion" id="op1"></div>
+            <div class="letra" id="l1">B</div>
+            <div class="nombre" id="n1">OPCION</div>
+        </div>
+        <div class="opciones">
+            <div class="opcion" id="op2"></div>
+                <div class="letra" id="l2">C</div>
+                <div class="nombre" id="n2">OPCION C</div>
+        </div>
+<!--PANTALLA FINAL-->
+<div id="pantalla-final">
+    <h2>CORRECTAS <span>3</span></h2>
+    <h2>INCORRECTAS <span>2</span></h2>
+    <button id="btn">VOLVER AL INICIO</button>
+</div>
+
+
+    <footer>Desarollado por nico, abi, brisa y leila</footer>
 </body>
-</html>
+<script src="script.js"></script>
+</html>  
