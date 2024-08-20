@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Seguridad Vial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ball"> <img src="png-transparent-car-top-compact-car-game-orange.png" id="ball"></div>
+        <div class="level" id="level1" data-level="1">1</div>
+        <div class="level locked" id="level2" data-level="2">2</div>
+        <div class="level locked" id="level3" data-level="3">3</div>
+        <div class="level locked" id="level4" data-level="4">4</div>
+        <div class="level locked" id="level5" data-level="5">5</div>
+        <div class="level locked" id="level6" data-level="6">6</div>
+        <div class="level locked" id="level7" data-level="7">7</div>
+        <div class="level locked" id="level8" data-level="8">8</div>
+        <div class="level locked" id="level9" data-level="9">9</div>
+        <div class="level locked" id="level10" data-level="10">10</div>
+    </div>
+        <video muted autoplay loop>
+            <source src="C:\Users\matynico\Desktop\juego vial\Vídeo sin título ‐ Hecho con Clipchamp.mp4" type="video/mp4">
+        </video>
+        <div class="capa"></div>
+
+    <div id="play-window">
+        <p>Nivel <span id="level-number"></span></p>
+        <button id="play-button">Jugar </button>
+    </div>
+
+    <div id="locked-window">
+        <p id="locked-message"></p>
+        <button id="close-locked-button">Cerrar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

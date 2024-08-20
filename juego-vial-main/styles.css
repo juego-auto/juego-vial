@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #4c2a74;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+h1 {
+    width: fit-content;
+    background-color: #fff;
+    margin: 40px auto;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 20px 30px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* PANTALLA INICIO */
+#pantalla-inicial {
+    display: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+#pantalla-inicial {
+    margin: 60px 0;
+}
+
+.btn {
+    border: none;
+    background-color: #eeea0f;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* PANTALLA JUEGO */
+#pantalla-juego {
+    display: none;
+}
+
+.opciones {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.opcion {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.opcion:hover {
+    background-color: #45a049; /* Verde más oscuro */
+    transform: scale(1.05);
+}
+
+/* PANTALLA FINAL */
+#pantalla-final {
+    display: none;
+}
