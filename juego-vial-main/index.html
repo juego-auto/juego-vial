@@ -8,37 +8,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>¿Cuál es la opción correcta?</h1>
+    <button class="btn-menu" onclick="volverAlMenu()">Volver al Menú</button>
+    <h1>¿Cuál es la principal función de las señales de tránsito?</h1>
 
-    <!-- PANTALLA INICIAL -->
-    <div id="pantalla-inicial">
-        <p>¿A quién deberías cederle el paso?</p>
-        <button class="btn">  </button>
+    <div class="question">
+        <img src="question1.jpg">
     </div>
 
-    <!-- PANTALLA DE JUEGO -->
+    <!-- Contenedor donde se cargará el contenido del menú -->
     <div class="pantalla-juego" id="pantalla-juego">
-        <img src="quest1.png">
+        <!-- Aquí se cargará el contenido del menú -->
     </div>
     
     <div class="opciones">
-        <button class="opcion" id="op0">A - OPCIÓN A</button>
-    </div>
-    <div class="opciones">
-        <button class="opcion" id="op1">B - OPCIÓN B</button>
-    </div>
-    <div class="opciones">
-        <button class="opcion" id="op2">C - OPCIÓN C</button>
+        <button class="opcion" id="op0">A) Indicar normas de circulación y advertir sobre condiciones de la vía.</button>
+        <button class="opcion" id="op1">B) Decorar las calles y carreteras.</button>
+        <button class="opcion" id="op2">C) Informar sobre la historia de la ciudad.</button>
     </div>
         
-    <!-- PANTALLA FINAL -->
-    <div id="pantalla-final">
-        <h2>CORRECTAS <span>3</span></h2>
-        <h2>INCORRECTAS <span>2</span></h2>
-        <button id="btn">VOLVER AL INICIO</button>
-    </div>
+    <button class="btn-enviar">Enviar</button>
 
     <footer>Desarrollado por Nico, Abi, Brisa y Leila</footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
