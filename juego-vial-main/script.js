@@ -10,5 +10,6 @@ opciones.forEach(button => {
         // Añade la clase 'seleccionado' al botón clicado
         this.classList.add('seleccionado');
     });
+
 });
 
