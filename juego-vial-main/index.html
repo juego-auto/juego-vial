@@ -20,13 +20,34 @@
         <!-- Aquí se cargará el contenido del menú -->
     </div>
     
-    <div class="opciones">
+    <!--<div class="opciones">
         <button class="opcion" id="op0">A) Indicar normas de circulación y advertir sobre condiciones de la vía.</button>
         <button class="opcion" id="op1">B) Decorar las calles y carreteras.</button>
         <button class="opcion" id="op2">C) Informar sobre la historia de la ciudad.</button>
     </div>
+    nico saque esto no andaba perdonnn-->
+    <div class="options">
+        <button onclick="checkAnswer('A')">A) Indicar normas de circulación y advertir sobre condiciones de la vía.</button>
+        <button onclick="checkAnswer('B')">B) Decorar las calles y carreteras.</button>
+        <button onclick="checkAnswer('C')">C)  Informar sobre la historia de la ciudad.</button>
+    </div>
+    <div id="feedback" class="feedback"></div>
+</div>
+
+<script>
+    function checkAnswer(selectedOption) {
+        const correctAnswer = 'A'; // La respuesta correcta es la opción A
+        const feedbackElement = document.getElementById('feedback');
         
-    <button class="btn-enviar">Enviar</button>
+        if (selectedOption === correctAnswer) {
+            feedbackElement.textContent = '¡Correcto!';
+            feedbackElement.className = 'feedback correct';
+        } else {
+            feedbackElement.textContent = 'Incorrecto. La respuesta correcta es París.';
+            feedbackElement.className = 'feedback incorrect';
+        }
+    }
+</script>
 
     <footer>Desarrollado por Nico, Abi, Brisa y Leila</footer>
 

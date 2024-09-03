@@ -140,3 +140,38 @@ footer {
     background-color: #d1c700; /* Amarillo más oscuro al pasar el cursor */
     transform: scale(1.05);
 }
+ /*lo nuevo que agregue yo (btisa)*/
+ .question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.options button {
+    display: block;
+    width: 100%;
+    background-color: #ffee00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.options button:hover {
+    background-color: #0056b3;
+}
+.feedback {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.correct {
+    color: rgb(0, 255, 0);
+    
+}
+.incorrect {
+    color: red;
+    
+}
