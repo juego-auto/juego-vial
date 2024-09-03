@@ -12,6 +12,3 @@ opciones.forEach(button => {
     });
 });
 
-function volverAlMenu() {
-    window.location.href = "/index.html";
-}

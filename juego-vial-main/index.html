@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button class="btn-menu" onclick="volverAlMenu()">Volver al Menú</button>
+    <a href="../index.html">
+        <button class="btn-menu">Volver al Menú</button>
+    </a>
     <h1>¿Cuál es la principal función de las señales de tránsito?</h1>
-
     <div class="question">
         <img src="question1.jpg">
     </div>
@@ -24,8 +25,7 @@
         <button class="opcion" id="op0">A) Indicar normas de circulación y advertir sobre condiciones de la vía.</button>
         <button class="opcion" id="op1">B) Decorar las calles y carreteras.</button>
         <button class="opcion" id="op2">C) Informar sobre la historia de la ciudad.</button>
-    </div>
-    nico saque esto no andaba perdonnn-->
+    </div>-->
     <div class="options">
         <button onclick="checkAnswer('A')">A) Indicar normas de circulación y advertir sobre condiciones de la vía.</button>
         <button onclick="checkAnswer('B')">B) Decorar las calles y carreteras.</button>
@@ -43,7 +43,7 @@
             feedbackElement.textContent = '¡Correcto!';
             feedbackElement.className = 'feedback correct';
         } else {
-            feedbackElement.textContent = 'Incorrecto. La respuesta correcta es París.';
+            feedbackElement.textContent = 'Incorrecto. La respuesta correcta es A.';
             feedbackElement.className = 'feedback incorrect';
         }
     }
