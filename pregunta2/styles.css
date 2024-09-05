@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+        background-color: #4c2a74;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 0;
+        position: relative; /* Asegura que el botón de menú esté posicionado correctamente */
+    }
+
+
+h1 {
+    width: fit-content;
+    background-color: #fff;
+    margin: 40px auto;
+    border-radius: 60px;
+    box-shadow: 5px 5px 0 #000;
+    padding: 20px 30px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000; /* Asegura que el footer esté por encima de otros contenidos */
+}
+
+/* PANTALLA INICIO */
+#pantalla-inicial {
+    display: none;
+    text-align: center;
+    font-size: 30px;
+}
+
+#pantalla-inicial {
+    margin: 60px 0;
+}
+
+.btn {
+    border: none;
+    background-color: #eeea0f;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* PANTALLA JUEGO */
+#pantalla-juego {
+    display: none;
+}
+
+.question {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100%;         
+}
+
+.opciones {
+    display: flex;
+    text-align: center;
+    margin:0 10%;
+}
+
+.opcion {
+    background-color: #4CAF50; /* Verde normal */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.opcion:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el cursor */
+    transform: scale(1.05);
+}
+
+.opcion.seleccionado {
+    background-color: #2e8b57; /* Verde aún más oscuro para el estado seleccionado */
+}
+/* PANTALLA FINAL */
+#pantalla-final {
+    display: none;
+}
+
+/* Botón de Enviar */
+.btn-enviar {
+    background-color: #eeea0f; /* Amarillo */
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 20px auto; /* Centra el botón horizontalmente */
+}
+
+.btn-enviar:hover {
+    background-color: #d1c700; /* Amarillo más oscuro al pasar el cursor */
+    transform: scale(1.05);
+}
+
+/* Botón de Volver al Menú */
+.btn-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #eeea0f; /* Amarillo */
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-menu:hover {
+    background-color: #d1c700; /* Amarillo más oscuro al pasar el cursor */
+    transform: scale(1.05);
+}
+ /*lo nuevo que agregue yo (btisa)*/
+ .question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.options button {
+    display: block;
+    width: 100%;
+    background-color: #ffee00;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.options button:hover {
+    background-color: #0056b3;
+}
+.feedback {
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.correct {
+    color: rgb(0, 255, 0);
+    
+}
+.incorrect {
+    color: red;
+    
+}

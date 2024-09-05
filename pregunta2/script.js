@@ -18,11 +18,8 @@ function checkAnswer(selectedOption) {
     
     if (selectedOption === correctAnswer) {
         feedbackElement.textContent = '¡Correcto!';
-        feedbackElement.className = 'feedback correct';}s
-    if (selectedOption === correctAnswer) {
-            feedbackElement.textContent = '¡Correcto!';
-            feedbackElement.className = 'feedback correct';}
-         else {
+        feedbackElement.className = 'feedback correct';
+    } else {
         feedbackElement.textContent = 'Incorrecto. La respuesta correcta es A.';
         feedbackElement.className = 'feedback incorrect';
     }

@@ -66,7 +66,7 @@ function checkCollision() {
             } else {
                 // Si el nivel está bloqueado, mostrar ventana de advertencia
                 level.style.transform = 'scale(1.5)';
-                lockedMessage.textContent = `Debes jugar el nivel ${levelNum - 1} para desbloquear el nivel ${levelNum}.`;
+                lockedMessage.textContent = `Debes ingresar el codigo del nivel ${levelNum - 1} para desbloquear el ${levelNum}.`;
                 lockedWindow.style.display = 'block';
                 isCollision = true;
                 activeLevel = level; // Guardar el nivel activo
@@ -103,3 +103,41 @@ playButton.addEventListener('click', () => {
         alert('Este nivel está bloqueado.');
     }
 });
+// Array de códigos para cada nivel
+const codigos = [
+    "1234", // NIVEL 0
+    "ojota pa con las señales", // Código para nivel 2
+    "91011", // Código para nivel 3
+    "1213", // Código para nivel 4
+    "1415", // Código para nivel 5
+    "1617", // Código para nivel 6
+    "1819", // Código para nivel 7
+    "2021", // Código para nivel 8
+    "2223", // Código para nivel 9
+    "2425"  // Código para nivel 10
+];
+
+// Nivel actual que el usuario está intentando desbloquear
+let nivelActual = 0;
+
+function verificarCodigo() {
+    // Obtener el valor ingresado por el usuario
+    const codigoIngresado = document.getElementById('codigo').value;
+    const resultadoDiv = document.getElementById('resultado');
+
+    // Verificar si el código ingresado corresponde al nivel actual
+    if (codigoIngresado === codigos[currentLevel]) {
+        currentLevel++;
+        if (currentLevel < codigos.length) {
+        window.location.href = "./pregunta2/index.html"
+            {currentLevel};
+            resultadoDiv.className = "";
+        } else {
+            resultadoDiv.textContent = "¡Felicidades! Has desbloqueado todos los niveles.";
+            resultadoDiv.className = "";
+        }
+    } else {
+        resultadoDiv.textContent = "Código incorrecto. Inténtalo de nuevo.";
+        resultadoDiv.className = "error";
+    }
+}
