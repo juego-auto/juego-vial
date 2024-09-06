@@ -15,16 +15,17 @@ opciones.forEach(button => {
 function checkAnswer(selectedOption) {
     const correctAnswer = 'A'; // La respuesta correcta es la opción A
     const feedbackElement = document.getElementById('feedback');
+    const codigoElement = document.getElementById("codigo")
     
     if (selectedOption === correctAnswer) {
         feedbackElement.textContent = '¡Correcto!';
-        feedbackElement.className = 'feedback correct';}s
-    if (selectedOption === correctAnswer) {
-            feedbackElement.textContent = '¡Correcto!';
-            feedbackElement.className = 'feedback correct';}
+        feedbackElement.className = 'feedback correct';
+        codigoElement.textContent = 'El código para el siguiente nivel es "Atento a las señales"';}
+
          else {
         feedbackElement.textContent = 'Incorrecto. La respuesta correcta es A.';
         feedbackElement.className = 'feedback incorrect';
+        codigoElement.textContent = "";
     }
 }
 

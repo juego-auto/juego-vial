@@ -8,31 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="../index.html">
-        <button class="btn-menu">Volver al Menú</button>
-    </a>
-    <h1>¿Cuál es la principal función de las señales de tránsito?</h1>
-    <div class="question">
-        <img src="question1.jpg">
+    <div class="contenedor">
+        <a href="../index.html">
+            <button class="btn-menu">Volver al Menú</button>
+        </a>
+        <h1>¿Cuál es la principal función de las señales de tránsito?</h1>
+            <div class="contenedor-img">
+                <img class="imagen" src="question1.jpg">
+            </div>
+        <div class="opciones">
+            <button class="opcion" onclick="checkAnswer('A')">A) Indicar normas de circulación y advertir sobre condiciones de la vía.</button>
+            <button class="opcion" onclick="checkAnswer('B')">B) Decorar las calles y carreteras.</button>
+            <button class="opcion" onclick="checkAnswer('C')">C)  Informar sobre la historia de la ciudad.</button>
+        </div>
+
+        <div id="feedback" class="feedback"></div>
+
+        <div id="codigo" class="codigo"></div>
+
+
+        <footer>Desarrollado por Nico, Abi, Brisa y Leila</footer>
+
     </div>
-
-    <!-- Contenedor donde se cargará el contenido del menú -->
-    <div class="pantalla-juego" id="pantalla-juego">
-        <!-- Aquí se cargará el contenido del menú -->
-    </div>
-    
-    <div class="opciones">
-        <button class="opcion" onclick="checkAnswer('A')">A) Indicar normas de circulación y advertir sobre condiciones de la vía.</button>
-        <button class="opcion" onclick="checkAnswer('B')">B) Decorar las calles y carreteras.</button>
-        <button class="opcion" onclick="checkAnswer('C')">C)  Informar sobre la historia de la ciudad.</button>
-    </div>
-    <div id="feedback" class="feedback"></div>
-</div>
-
-
-    <footer>Desarrollado por Nico, Abi, Brisa y Leila</footer>
-
-    
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

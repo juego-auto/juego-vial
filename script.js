@@ -106,7 +106,7 @@ playButton.addEventListener('click', () => {
 // Array de códigos para cada nivel
 const codigos = [
     "1234", // NIVEL 0
-    "ojota pa con las señales", // Código para nivel 2
+    "Atento a las señales", // Código para nivel 2
     "91011", // Código para nivel 3
     "1213", // Código para nivel 4
     "1415", // Código para nivel 5
