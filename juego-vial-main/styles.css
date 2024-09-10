@@ -135,9 +135,9 @@ footer {
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #eeea0f; /* Amarillo */
-    border: none;
-    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    color: #ffffff;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 10px;
@@ -146,8 +146,9 @@ footer {
 }
 
 .btn-menu:hover {
-    background-color: #d1c700; /* Amarillo más oscuro al pasar el cursor */
+    background-color: #be4039; /* Amarillo más oscuro al pasar el cursor */
     transform: scale(1.05);
+    transform: scale(1.2); /* Agranda el texto en un 20% */
 }
 
 .options button {
@@ -184,7 +185,7 @@ footer {
     
 }
 
-.codigo {
+.codigo, .codetext {
     font-size: 30px;
     margin: 0;
     padding: 0;
@@ -192,4 +193,33 @@ footer {
     font-weight: bold;
     text-align: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container-copybtn { /* se centra el boton de copiar */
+    width: 5%; 
+    margin: 0 auto; 
+}
+
+#copy-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copy-button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;  /* Oculta el botón */
+}
+
+.bi-clipboard-fill {
+    width: 30px;
+    height: 30px;
 }

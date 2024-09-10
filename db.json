@@ -1,0 +1,175 @@
+{
+    "preguntas": [
+        {
+            "pregunta": "¿Cuál es la principal función de las señales de tránsito? hola",
+            "opciones": [
+                {
+                    "texto": "A) Informar sobre la historia de la ciudad.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "B) Decorar las calles y carreteras.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "C) Indicar normas de circulación y advertir sobre condiciones de la vía.",
+                    "esCorrecta": true
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué debes hacer cuando te encuentras con una señal de STOP?",
+            "opciones": [
+                {
+                    "texto": "A) Detener completamente el vehículo antes de continuar",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "B) Reducir la velocidad y seguir sin detenerte.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "C) Aumentar la velocidad para pasar rápidamente.",
+                    "esCorrecta": false
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué significa una luz verde en un semáforo?",
+            "opciones": [
+                {
+                    "texto": "A) Puedes avanzar con precaución.",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "B) Debes detenerte completamente.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "C) Debes esperar a que la luz cambie a roja.",
+                    "esCorrecta": false
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cómo debes señalizar un cambio de carril?",
+            "opciones": [
+                {
+                    "texto": "A) Usar el indicador de dirección.",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "B) Acelerar rápidamente para hacer el cambio.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "C) Tocar el claxon para alertar a los demás conductores.",
+                    "esCorrecta": false
+                }
+        
+        ]
+        },
+        {
+            "pregunta": "¿Qué hacer si te aproximas a una rotonda?",
+            "opciones": [
+                {
+                    "texto": "A) Reducir la velocidad y ceder el paso a los vehículos en la rotonda.",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "B) Aumentar la velocidad para entrar rápidamente.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "C) Ignorar la señalización y continuar sin detenerte.",
+                    "esCorrecta": false
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué significa una señal de tránsito con forma de triángulo rojo?",
+            "opciones": [
+                {
+                    "texto": "A) Permiso para adelantar.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "B) Advertencia sobre una posible peligrosidad en la vía.",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "C) Indicación de un área de estacionamiento.",
+                    "esCorrecta": false
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la distancia mínima recomendada para mantener con el vehículo que va adelante?",
+            "opciones": [
+                {
+                    "texto": "A) 1 metro.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "B) 10 metros.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "C) Al menos 2 segundos de distancia.",
+                    "esCorrecta": true
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Qué debes hacer si ves una señal de Ceda el paso?",
+            "opciones": [
+                {
+                    "texto": "A) Reducir la velocidad y estar preparado para detenerte si es necesario.",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "B) Continuar sin preocuparte por los demás vehículos.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "C) Aumentar la velocidad para no detenerte.",
+                    "esCorrecta": false
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cómo debes actuar en una intersección sin señalización?",
+            "opciones": [
+                {
+                    "texto": "A) Avanzar sin preocuparte por otros vehículos.",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "B) Ceder el paso a los vehículos que vienen por la derecha.",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "C) Ignorar la intersección y continuar tu ruta.",
+                    "esCorrecta": false
+                }
+            ]
+        },
+        {
+            "pregunta": "¿Cuál es la velocidad máxima permitida en una zona escolar, según la normativa general?",
+            "opciones": [
+                {
+                    "texto": "A) 60 km/h.",
+                    "esCorrecta": false
+                },
+                {
+                    "texto": "B) 20-30 km/h",
+                    "esCorrecta": true
+                },
+                {
+                    "texto": "C) 80 km/h.",
+                    "esCorrecta": false
+                }
+            ]
+        }   
+    ]
+}

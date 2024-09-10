@@ -15,17 +15,49 @@ opciones.forEach(button => {
 function checkAnswer(selectedOption) {
     const correctAnswer = 'A'; // La respuesta correcta es la opción A
     const feedbackElement = document.getElementById('feedback');
+    const codetextElement = document.getElementById("codetext")
     const codigoElement = document.getElementById("codigo")
+    const copyButton = document.getElementById('copy-button');
     
     if (selectedOption === correctAnswer) {
         feedbackElement.textContent = '¡Correcto!';
         feedbackElement.className = 'feedback correct';
-        codigoElement.textContent = 'El código para el siguiente nivel es "Atento a las señales"';}
+        codetextElement.textContent = "El codigo para el siguiente nivel es:";
+        codigoElement.textContent = 'Atento a las señales';
+        copyButton.classList.remove('hidden'); // Muestra el botón
+    }
+
 
          else {
         feedbackElement.textContent = 'Incorrecto. La respuesta correcta es A.';
         feedbackElement.className = 'feedback incorrect';
         codigoElement.textContent = "";
+        codetextElement.textContent = "";
+        copyButton.classList.add('hidden'); // Oculta el botón
     }
 }
 
+function copyToClipboard() {
+    const textToCopy = document.getElementById('codigo').textContent;
+    navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Texto copiado al portapapeles!');
+    }).catch(err => {
+        console.error('Error al copiar el texto: ', err);
+    });
+}
+
+// codigo para el json
+
+fetch("../db.json")
+    .then(res => res.json())
+    .then(data => {
+        console.log(document.getElementById("pregunta"))
+        document.getElementById("pregunta").innerText=data.preguntas[currentLevel].pregunta;
+    })
+    .catch(error => {
+        console.error("Error al obtener los datos:", error);
+    });
+
+    console.log(localStorage.setItem("nivel actual", "0"));
+    console.log(localStorage.getItem("nivel actual"));
+    

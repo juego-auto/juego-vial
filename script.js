@@ -9,7 +9,7 @@ const lockedMessage = document.getElementById('locked-message');
 
 let posX = window.innerWidth / 2 - ball.offsetWidth / 2;
 let posY = window.innerHeight / 2 - ball.offsetHeight / 2;
-let currentLevel = 1; // Nivel que está desbloqueado
+let currentLevel = 0; // Nivel que está desbloqueado
 let activeLevel = null; // Nivel actualmente colisionado
 
 // Colocar el "ball" en el centro de la pantalla al cargar la página
@@ -94,6 +94,7 @@ playButton.addEventListener('click', () => {
         if (levelNum === currentLevel) {
             // Desbloquear el siguiente nivel
             currentLevel++;
+            localStorage.setItem("nivel actual", currentLevel)
             const nextLevel = document.querySelector(`.level[data-level="${currentLevel}"]`);
             if (nextLevel) {
                 nextLevel.classList.remove('locked');
@@ -107,7 +108,7 @@ playButton.addEventListener('click', () => {
 const codigos = [
     "1234", // NIVEL 0
     "Atento a las señales", // Código para nivel 2
-    "91011", // Código para nivel 3
+    "STOP", // Código para nivel 3
     "1213", // Código para nivel 4
     "1415", // Código para nivel 5
     "1617", // Código para nivel 6
@@ -117,15 +118,13 @@ const codigos = [
     "2425"  // Código para nivel 10
 ];
 
-// Nivel actual que el usuario está intentando desbloquear
-let nivelActual = 0;
-
 function verificarCodigo() {
     // Obtener el valor ingresado por el usuario
     const codigoIngresado = document.getElementById('codigo').value;
     const resultadoDiv = document.getElementById('resultado');
 
-    // Verificar si el código ingresado corresponde al nivel actual
+ //  Verificar si el código ingresado corresponde al nivel actual
+ console.log(currentLevel)
     if (codigoIngresado === codigos[currentLevel]) {
         currentLevel++;
         if (currentLevel < codigos.length) {
@@ -140,4 +139,6 @@ function verificarCodigo() {
         resultadoDiv.textContent = "Código incorrecto. Inténtalo de nuevo.";
         resultadoDiv.className = "error";
     }
-}
+} 
+
+console.log(localStorage.getItem("nivel actual"));
