@@ -3,9 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const gameContainer = document.getElementById('game-container');
     const scoreValue = document.getElementById('score-value');
 
-    let score = 0;
-    let gameSpeed = 5;
-    let obstacleInterval;
+// Aviso de que el juego esta en desarrollo
+alert("El juego esta en desarrollo");
+let posX = window.innerWidth / 2 - ball.offsetWidth / 2;
+let posY = window.innerHeight / 2 - ball.offsetHeight / 2;
+let currentLevel = 1; // Nivel que está desbloqueado
+let activeLevel = null; // Nivel actualmente colisionado
 
     // Add rain effect
     for (let i = 0; i < 50; i++) {
