@@ -89,7 +89,7 @@ playButton.addEventListener('click', () => {
 
     if (levelNum <= currentLevel) {
         // Aquí puedes redirigir a la página correspondiente al nivel
-        window.location.href = `juego-vial-main/index.html`;
+        window.location.href = `pregunta/index.html`;
 
         if (levelNum === currentLevel) {
             // Desbloquear el siguiente nivel
