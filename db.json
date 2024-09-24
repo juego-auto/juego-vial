@@ -15,7 +15,9 @@
                     "texto": "C) Indicar normas de circulación y advertir sobre condiciones de la vía.",
                     "esCorrecta": true
                 }
-            ]
+                
+            ],
+            "imagen":"sources/question1.jpg"
         },
         {
             "pregunta": "¿Qué debes hacer cuando te encuentras con una señal de STOP?",
@@ -32,7 +34,9 @@
                     "texto": "C) Aumentar la velocidad para pasar rápidamente.",
                     "esCorrecta": false
                 }
-            ]
+
+            ],
+            "imagen":"../sources/question2.jpg"
         },
         {
             "pregunta": "¿Qué significa una luz verde en un semáforo?",
