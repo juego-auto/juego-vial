@@ -17,7 +17,7 @@
                 }
                 
             ],
-            "imagen":"sources/question1.jpg"
+            "imagen":"../sources/question1.jpg"
         },
         {
             "pregunta": "¿Qué debes hacer cuando te encuentras con una señal de STOP?",
@@ -53,7 +53,8 @@
                     "texto": "C) Debes esperar a que la luz cambie a roja.",
                     "esCorrecta": false
                 }
-            ]
+            ],
+            "imagen":"../sources/question3.jpg"
         },
         {
             "pregunta": "¿Cómo debes señalizar un cambio de carril?",
@@ -71,7 +72,8 @@
                     "esCorrecta": false
                 }
         
-        ]
+            ],
+            "imagen":"../sources/question4.jpg"
         },
         {
             "pregunta": "¿Qué hacer si te aproximas a una rotonda?",
@@ -88,7 +90,8 @@
                     "texto": "C) Ignorar la señalización y continuar sin detenerte.",
                     "esCorrecta": false
                 }
-            ]
+            ],
+            "imagen":"../sources/question5.jpg"
         },
         {
             "pregunta": "¿Qué significa una señal de tránsito con forma de triángulo rojo?",
@@ -105,7 +108,8 @@
                     "texto": "C) Indicación de un área de estacionamiento.",
                     "esCorrecta": false
                 }
-            ]
+            ],
+            "imagen":"../sources/question6.jpg"
         },
         {
             "pregunta": "¿Cuál es la distancia mínima recomendada para mantener con el vehículo que va adelante?",
@@ -122,7 +126,8 @@
                     "texto": "C) Al menos 2 segundos de distancia.",
                     "esCorrecta": true
                 }
-            ]
+            ],
+            "imagen":"../sources/question7.jpg"
         },
         {
             "pregunta": "¿Qué debes hacer si ves una señal de Ceda el paso?",
@@ -139,7 +144,8 @@
                     "texto": "C) Aumentar la velocidad para no detenerte.",
                     "esCorrecta": false
                 }
-            ]
+            ],
+            "imagen":"../sources/question8.jpg"
         },
         {
             "pregunta": "¿Cómo debes actuar en una intersección sin señalización?",
@@ -156,7 +162,8 @@
                     "texto": "C) Ignorar la intersección y continuar tu ruta.",
                     "esCorrecta": false
                 }
-            ]
+            ],
+            "imagen":"../sources/question9.jpg"
         },
         {
             "pregunta": "¿Cuál es la velocidad máxima permitida en una zona escolar, según la normativa general?",
@@ -173,7 +180,8 @@
                     "texto": "C) 80 km/h.",
                     "esCorrecta": false
                 }
-            ]
+            ],
+            "imagen":"../sources/question10.jpg"
         }   
     ]
 }

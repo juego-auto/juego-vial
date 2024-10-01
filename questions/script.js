@@ -3,6 +3,7 @@
 // Selecciona todos los botones de opción
 const opciones = document.querySelectorAll('.opcion');
 
+
 // Añade un evento de clic a cada botón
 opciones.forEach(button => {
     button.addEventListener('click', function() {
@@ -14,6 +15,7 @@ opciones.forEach(button => {
 
         // Llama a la función para verificar la respuesta
         checkAnswer(this.dataset.option); // Usa el atributo data-option
+        console.log(this);
     });
 });
 
@@ -46,8 +48,15 @@ function checkAnswer(selectedOption) {
 fetch("../db.json")
     .then(res => res.json())
     .then(data => {
+        console.log(data)
         document.getElementById("pregunta").innerText =data.preguntas[localStorage.getItem('LevelTo')-1].pregunta;
         document.getElementById("img").src =data.preguntas[localStorage.getItem('LevelTo')-1].imagen;
+        document.getElementById("option1").innerText = data.preguntas[localStorage.getItem('LevelTo')-1].opciones[0].texto;
+        document.getElementById("option1").innerText=opcion.text[localStorage.getItem('LevelTo')-1].opcion.dataset.correct=opcion.correct;
+        opcion.innerText=opcion.text;
+        opcion.dataset.correct=opcion.correct;
+        document.getElementById("option2").innerText = data.preguntas[localStorage.getItem('LevelTo')-1].opciones[1].texto;
+        document.getElementById("option3").innerText=data.preguntas[localStorage.getItem('LevelTo')-1].opciones[2].texto;
     })
     
     .catch(error => {
