@@ -8,11 +8,12 @@ const lockedMessage = document.getElementById('locked-message');
 
 let posX = window.innerWidth / 2 - ball.offsetWidth / 2;
 let posY = window.innerHeight / 2 - ball.offsetHeight / 2;
-let currentLevel = parseInt(localStorage.getItem("nivel actual")) || 0; // Nivel que está desbloqueado
+let nivelMax =(localStorage.getItem("nivelMax")) || 1; // Nivel que está desbloqueado
 
-window.onload = function() {
+// esto es para que el cursos se posicione en el centro de la pantalla
+window.onload = function () {
     ball.style.transform = `translate(${posX}px, ${posY}px)`;
-    unlockLevels(); // Desbloquear niveles según currentLevel
+    unlockLevels(); // Desbloquear niveles según nivel maximo
 };
 
 document.addEventListener('keydown', (event) => {
@@ -40,7 +41,7 @@ function checkCollision() {
 
         if (rect1.left < rect2.right && rect1.right > rect2.left && rect1.top < rect2.bottom && rect1.bottom > rect2.top) {
             // Permitir acceso a nivel 1 y a los niveles hasta currentLevel
-            if (levelNum <= currentLevel + 1) {
+            if (levelNum <= nivelMax + 1) {
                 level.style.transform = 'scale(1.5)';
                 levelNumber.textContent = level.textContent;
                 playWindow.style.display = 'block';
@@ -63,10 +64,11 @@ function checkCollision() {
     }
 }
 
+// esto desbloquea hasta el nivel maximo 
 function unlockLevels() {
     levels.forEach(level => {
         const levelNum = parseInt(level.getAttribute('data-level'));
-        if (levelNum <= currentLevel) {
+        if (levelNum <= nivelMax) {
             level.classList.remove('locked');
         } else {
             level.classList.add('locked');
@@ -79,8 +81,8 @@ playButton.addEventListener('click', () => {
     // LevelNum es el nivel en donde el cursor esta apoyado
     const levelNum = (levelNumber.textContent);
     console.log(levelNum)
-    if (levelNum <= currentLevel + 1 ) {// Permitir jugar el siguiente nivel
-         localStorage.setItem("LevelTo", levelNum);
+    if (levelNum <= nivelMax + 1) {// Permitir jugar el siguiente nivel
+        localStorage.setItem("LevelTo", levelNum);
         window.location.href = `questions/index.html`;
     } else {
         alert('Este nivel está bloqueado.');
@@ -92,6 +94,6 @@ if (localStorage.getItem("nivel actual") == null) {
     localStorage.setItem("nivel actual", "0");
 }
 
-console.log(localStorage.getItem("nivel actual"));
+console.log("nivelMax",levelnumber)
 
 
