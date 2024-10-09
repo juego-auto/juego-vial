@@ -81,9 +81,23 @@ function unlockLevels() {
     });
 }
 
-// Arreglo para registrar los niveles completados
-let completedLevels = JSON.parse(localStorage.getItem("completedLevels")) || [];
 
+let completedLevels = [];
+
+// Función para cargar los niveles completados desde 'db.json'
+async function loadCompletedLevels() {
+    try {
+        const response = await fetch('db.json'); // Ruta del archivo JSON
+        const data = await response.json();
+        completedLevels = data.completedLevels || [];
+        console.log("Niveles completados cargados:", completedLevels);
+    } catch (error) {
+        console.error('Error al cargar los niveles completados:', error);
+    }
+}
+
+// Llama a la función para cargar los niveles al inicio
+loadCompletedLevels();
 
 // Manejador del botón "Jugar"
 playButton.addEventListener('click', () => {
@@ -92,27 +106,28 @@ playButton.addEventListener('click', () => {
     // Verifica si el nivel ya ha sido completado
     if (levelNum === LevelTo && !completedLevels.includes(levelNum)) {
         // Actualiza el nivel máximo si es necesario
-        if (levelNum > levelMax) {
-            levelMax = levelNum;
-            localStorage.setItem("levelMax", levelMax);
-        }
+       
 
-        // Marca este nivel como completado
-        completedLevels.push(levelNum);
+
+        // Si necesitas guardar el progreso localmente:
         localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
 
         // Incrementa LevelTo para jugar el siguiente nivel
-        LevelTo++;
+        
         localStorage.setItem("LevelTo", LevelTo);
 
         // Redirigir a la página de preguntas del nivel
-        window.location.href = `questions/index.html`;
+        window.location.href = 'questions/index.html';
     } else if (completedLevels.includes(levelNum)) {
         alert('Ya has completado este nivel.');
     } else {
         alert('Este nivel está bloqueado.');
     }
 });
+
+if(levelMax===10){
+    alert("Felicidades, ¡Ha terminado el juego!");
+}
 
 
 console.log("nivelMax",nivelMax)

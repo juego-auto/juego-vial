@@ -1,7 +1,7 @@
 {
     "preguntas": [
         {
-            "pregunta": "¿Cuál es la principal función de las señales de tránsito? hola",
+            "pregunta": "¿Cuál es la principal función de las señales de tránsito?",
             "opciones": [
                 {
                     "texto": "A) Informar sobre la historia de la ciudad.",
@@ -42,12 +42,12 @@
             "pregunta": "¿Qué significa una luz verde en un semáforo?",
             "opciones": [
                 {
-                    "texto": "A) Puedes avanzar con precaución.",
-                    "esCorrecta": true
+                    "texto": "A) Debes detenerte completamente.",
+                    "esCorrecta": false
                 },
                 {
-                    "texto": "B) Debes detenerte completamente.",
-                    "esCorrecta": false
+                    "texto": "B) Puedes avanzar con precaución.",
+                    "esCorrecta": true
                 },
                 {
                     "texto": "C) Debes esperar a que la luz cambie a roja.",
@@ -79,16 +79,16 @@
             "pregunta": "¿Qué hacer si te aproximas a una rotonda?",
             "opciones": [
                 {
-                    "texto": "A) Reducir la velocidad y ceder el paso a los vehículos en la rotonda.",
-                    "esCorrecta": true
+                    "texto": "A) Ignorar la señalización y continuar sin detenerte.",
+                    "esCorrecta": false
                 },
                 {
                     "texto": "B) Aumentar la velocidad para entrar rápidamente.",
                     "esCorrecta": false
                 },
                 {
-                    "texto": "C) Ignorar la señalización y continuar sin detenerte.",
-                    "esCorrecta": false
+                    "texto": "C) Reducir la velocidad y ceder el paso a los vehículos en la rotonda.",
+                    "esCorrecta": true
                 }
             ],
             "imagen":"../sources/question5.jpg"
@@ -109,7 +109,7 @@
                     "esCorrecta": false
                 }
             ],
-            "imagen":"../sources/question6.jpg"
+            "imagen":"../sources/question6.png"
         },
         {
             "pregunta": "¿Cuál es la distancia mínima recomendada para mantener con el vehículo que va adelante?",
@@ -127,7 +127,7 @@
                     "esCorrecta": true
                 }
             ],
-            "imagen":"../sources/question7.jpg"
+            "imagen":"../sources/question7.png"
         },
         {
             "pregunta": "¿Qué debes hacer si ves una señal de Ceda el paso?",
@@ -152,7 +152,7 @@
             "opciones": [
                 {
                     "texto": "A) Avanzar sin preocuparte por otros vehículos.",
-                    "esCorrecta": true
+                    "esCorrecta": false
                 },
                 {
                     "texto": "B) Ceder el paso a los vehículos que vienen por la derecha.",
@@ -173,15 +173,19 @@
                     "esCorrecta": false
                 },
                 {
-                    "texto": "B) 20-30 km/h",
-                    "esCorrecta": true
+                    "texto": "B) 80 km/h.",
+                    "esCorrecta": false
                 },
                 {
-                    "texto": "C) 80 km/h.",
-                    "esCorrecta": false
+                    "texto": "C) 20-30 km/h",
+                    "esCorrecta": true
                 }
             ],
             "imagen":"../sources/question10.jpg"
-        }   
+        },
+        {
+                "completedLevels": []
+        }
     ]
+        
 }
