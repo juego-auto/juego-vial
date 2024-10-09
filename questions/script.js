@@ -20,9 +20,9 @@ function checkAnswer(selectedOption) {
     const feedbackElement = document.getElementById('feedback');
     
     // Verifica si el nivel ya ha sido incrementado
-    let LevelNum = (localStorage.getItem("nivelMax"))
-    let currentLevel = parseInt(localStorage.getItem("nivelMax"));
-    const levelIncremented = localStorage.getItem("levelIncremented") === 'true';
+    let levelMax = (localStorage.getItem("levelMax"))
+    let LevelTo = (localStorage.getItem("LevelTo"));
+
 
 
     if (selectedOption === 'true') {
@@ -61,11 +61,6 @@ fetch("../db.json")
         console.error("Error al obtener los datos:", error);
     });
 
-// Inicializa el localStorage si es la primera vez que se carga
-if (localStorage.getItem("nivelMax") == null) {
-    localStorage.setItem("nivelMax", "0");
-    localStorage.setItem("levelIncremented", 'false'); // Asegúrate de que se pueda incrementar
-}
 
-console.log(localStorage.getItem("nivelMax"));
-console.log(localStorage.getItem("nivelMax"))
+console.log(localStorage.getItem("levelMax",levelMax));
+

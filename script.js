@@ -8,7 +8,7 @@ const lockedMessage = document.getElementById('locked-message');
 
 let posX = window.innerWidth / 2 - ball.offsetWidth / 2;
 let posY = window.innerHeight / 2 - ball.offsetHeight / 2;
-let nivelMax =(localStorage.getItem("nivelMax")) || 1; // Nivel que está desbloqueado
+let nivelMax =(localStorage.getItem("nivelMax")) || 0; // Nivel que está desbloqueado
 
 // esto es para que el cursos se posicione en el centro de la pantalla
 window.onload = function () {
@@ -31,6 +31,11 @@ document.addEventListener('keydown', (event) => {
     checkCollision();
 });
 
+// los valores de levelTo y levelMax se almacenan
+let levelMax = parseInt(localStorage.getItem("levelMax")) || 0;  // Nivel más alto alcanzado
+let LevelTo = parseInt(localStorage.getItem("LevelTo")) || 1;  // Próximo nivel a jugar
+
+
 function checkCollision() {
     let isCollision = false;
 
@@ -40,16 +45,15 @@ function checkCollision() {
         const levelNum = parseInt(level.getAttribute('data-level'));
 
         if (rect1.left < rect2.right && rect1.right > rect2.left && rect1.top < rect2.bottom && rect1.bottom > rect2.top) {
-            // Permitir acceso a nivel 1 y a los niveles hasta currentLevel
-            if (levelNum <= nivelMax + 1) {
+            if (levelNum <= LevelTo) {
                 level.style.transform = 'scale(1.5)';
                 levelNumber.textContent = level.textContent;
                 playWindow.style.display = 'block';
                 lockedWindow.style.display = 'none';
                 isCollision = true;
-            } else {
+            } else if (levelNum > LevelTo) {
                 level.style.transform = 'scale(1.5)';
-                lockedMessage.textContent = `Debes jugar el ${levelNum - 1} para desbloquear el nivel ${levelNum}.`;
+                lockedMessage.textContent = `Debes jugar el nivel ${LevelTo} antes de desbloquear este nivel.`;
                 lockedWindow.style.display = 'block';
                 isCollision = true;
             }
@@ -64,11 +68,12 @@ function checkCollision() {
     }
 }
 
+
 // esto desbloquea hasta el nivel maximo 
 function unlockLevels() {
     levels.forEach(level => {
         const levelNum = parseInt(level.getAttribute('data-level'));
-        if (levelNum <= nivelMax) {
+        if (levelNum <= levelMax) {
             level.classList.remove('locked');
         } else {
             level.classList.add('locked');
@@ -76,24 +81,40 @@ function unlockLevels() {
     });
 }
 
+// Arreglo para registrar los niveles completados
+let completedLevels = JSON.parse(localStorage.getItem("completedLevels")) || [];
+
+
 // Manejador del botón "Jugar"
 playButton.addEventListener('click', () => {
-    // LevelNum es el nivel en donde el cursor esta apoyado
-    const levelNum = (levelNumber.textContent);
-    console.log(levelNum)
-    if (levelNum <= nivelMax + 1) {// Permitir jugar el siguiente nivel
-        localStorage.setItem("LevelTo", levelNum);
+    const levelNum = parseInt(levelNumber.textContent);
+
+    // Verifica si el nivel ya ha sido completado
+    if (levelNum === LevelTo && !completedLevels.includes(levelNum)) {
+        // Actualiza el nivel máximo si es necesario
+        if (levelNum > levelMax) {
+            levelMax = levelNum;
+            localStorage.setItem("levelMax", levelMax);
+        }
+
+        // Marca este nivel como completado
+        completedLevels.push(levelNum);
+        localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
+
+        // Incrementa LevelTo para jugar el siguiente nivel
+        LevelTo++;
+        localStorage.setItem("LevelTo", LevelTo);
+
+        // Redirigir a la página de preguntas del nivel
         window.location.href = `questions/index.html`;
+    } else if (completedLevels.includes(levelNum)) {
+        alert('Ya has completado este nivel.');
     } else {
         alert('Este nivel está bloqueado.');
     }
 });
 
-// Inicializa el almacenamiento si es necesario
-if (localStorage.getItem("nivel actual") == null) {
-    localStorage.setItem("nivel actual", "0");
-}
 
-console.log("nivelMax",levelnumber)
+console.log("nivelMax",nivelMax)
 
 
