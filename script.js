@@ -16,12 +16,17 @@ window.onload = function () {
     unlockLevels(); // Desbloquear niveles según nivel maximo
 };
 
+// permite que el usuario se pueda mover con los botones WASD y las flechas del teclado
 document.addEventListener('keydown', (event) => {
     switch (event.key) {
-        case 'ArrowUp': posY -= 30; break;
-        case 'ArrowDown': posY += 30; break;
-        case 'ArrowLeft': posX -= 30; break;
-        case 'ArrowRight': posX += 30; break;
+        case 'ArrowUp': posY -= 40; break;
+        case 'ArrowDown': posY += 40; break;
+        case 'ArrowLeft': posX -= 40; break;
+        case 'ArrowRight': posX += 40; break;
+        case 'w': posY -= 40; break;
+        case 's': posY += 40; break;
+        case 'a': posX -= 40; break;
+        case 'd': posX += 40; break;
     }
 
     posX = Math.max(0, Math.min(window.innerWidth - ball.offsetWidth, posX));
