@@ -106,3 +106,25 @@ body:hover {
     cursor: url("../sources/mouse.png"), pointer !important; /* Reemplaza con la ruta de tu imagen */
 
 }
+.endContainer {
+    visibility: hidden;
+}
+.true {
+    visibility: visible;
+    display: flex; /* Contenedor padre para centrar el end-container */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+} 
+
+.end {
+    font-size: 30px;
+    border: 3px black solid;
+    border-radius: 15px;
+    background-color: rgba(10, 0, 0, 0.5);
+    padding: 20px;
+    position: relative;
+    z-index: 3;
+    color: white;
+    display: inline-block; /* Ocupa solo el espacio del contenido */
+}
+
