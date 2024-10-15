@@ -130,11 +130,19 @@ playButton.addEventListener('click', () => {
     }
 });
 
+
+
+// se agrega el div del final del juego
+const endContainerElement = document.getElementById('endContainer');
+
 if(levelMax===10){
-    alert("Felicidades, ¡Ha terminado el juego!");
+ endContainerElement.className = 'endContainer true';
+}
+
+else {
+    
 }
 
 
-console.log("nivelMax",nivelMax)
 
 
