@@ -16,7 +16,7 @@ body {
     position: relative;
     width: 70px;
     height: 30px;
-    background-color: red;
+
     transition: transform 0.1s;
 }
 
@@ -101,4 +101,8 @@ video {
     background-color: #1c1c1d;
     opacity: 0.4;
 }
-/* */
+
+body:hover {
+    cursor: url("../sources/mouse.png"), pointer !important; /* Reemplaza con la ruta de tu imagen */
+
+}
