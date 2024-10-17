@@ -119,7 +119,7 @@ playButton.addEventListener('click', () => {
 
         // Redirigir a la página de preguntas del nivel
         window.location.href = 'questions/index.html';
-    } else (completedLevels.includes(levelNum)); {
+    } else {
         alert('Ya has completado este nivel.');
     }
 });
