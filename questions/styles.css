@@ -85,7 +85,7 @@ footer {
 }
 
 .opciones {
-    display: flex;
+    display: column;
     flex-direction: column; /* Cambia a columna para pantallas pequeñas */
     margin: 10px auto;
     width: 90%; /* Asegura que se mantenga dentro de la pantalla */
@@ -104,6 +104,7 @@ footer {
     cursor: url("../sources/mouse.png"), pointer !important;
     transition: background-color 0.3s, transform 0.3s;
     min-width: 30%;
+    max-width: 30%;
 }
 
 .opcion:hover {
