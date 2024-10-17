@@ -12,19 +12,22 @@ body:hover {
 }
 
 .contenedor {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Ocupa al menos la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que los márgenes internos no afecten el ancho */
 }
 
 
 h1 {
-    width: fit-content;
+    width: 90%;
     background-color: #fff;
-    margin: 40px auto;
+    margin: 20px auto;
     border-radius: 60px;
     box-shadow: 5px 5px 0 #000;
-    padding: 20px 30px;
+    padding: 15px 20px;
+    text-align: center; /* Centra el texto */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -49,16 +52,14 @@ footer {
 }
 
 .contenedor-img {
-    padding: 0;
-    margin: 0;
-    display: flex; /* Activar Flexbox */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100%; /* Altura del contenedor, 100% de la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .imagen {
-    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-width: 90%; /* Asegura que la imagen no exceda el ancho del contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 10px; /* Bordes redondeados opcionales */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional para un mejor efecto */
@@ -85,9 +86,10 @@ footer {
 
 .opciones {
     display: flex;
-    text-align: center;
-    margin:0 10%;
-    
+    flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+    margin: 10px auto;
+    width: 90%; /* Asegura que se mantenga dentro de la pantalla */
+    gap: 10px; /* Espacio entre botones */
 }
 
 .opcion {

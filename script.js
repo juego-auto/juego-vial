@@ -3,44 +3,60 @@ const levels = document.querySelectorAll('.level');
 const playWindow = document.getElementById('play-window');
 const lockedWindow = document.getElementById('locked-window');
 const playButton = document.getElementById('play-button');
+const closeButton = document.getElementById('close-locked-button');
 const levelNumber = document.getElementById('level-number');
 const lockedMessage = document.getElementById('locked-message');
-
 let posX = window.innerWidth / 2 - ball.offsetWidth / 2;
 let posY = window.innerHeight / 2 - ball.offsetHeight / 2;
-let nivelMax =(localStorage.getItem("nivelMax")) || 0; // Nivel que está desbloqueado
+let levelMax = parseInt(localStorage.getItem("levelMax")) || 0;  // Nivel más alto alcanzado
+let LevelTo = parseInt(localStorage.getItem("LevelTo")) || 1;  // Próximo nivel a jugar
 
-// esto es para que el cursos se posicione en el centro de la pantalla
+// Centrar el cursor al cargar la página
 window.onload = function () {
     ball.style.transform = `translate(${posX}px, ${posY}px)`;
     unlockLevels(); // Desbloquear niveles según nivel maximo
 };
 
-// permite que el usuario se pueda mover con los botones WASD y las flechas del teclado
+// Movimiento con WASD y las flechas
 document.addEventListener('keydown', (event) => {
-    switch (event.key) {
-        case 'ArrowUp': posY -= 40; break;
-        case 'ArrowDown': posY += 40; break;
-        case 'ArrowLeft': posX -= 40; break;
-        case 'ArrowRight': posX += 40; break;
-        case 'w': posY -= 40; break;
-        case 's': posY += 40; break;
-        case 'a': posX -= 40; break;
-        case 'd': posX += 40; break;
+    moveBall(event.key);
+});
+
+// Detectar los clics en los botones táctiles
+document.getElementById('up').addEventListener('click', function() {
+    moveBall('ArrowUp');
+});
+
+document.getElementById('left').addEventListener('click', function() {
+    moveBall('ArrowLeft');
+});
+
+document.getElementById('down').addEventListener('click', function() {
+    moveBall('ArrowDown');
+});
+
+document.getElementById('right').addEventListener('click', function() {
+    moveBall('ArrowRight');
+});
+
+// Función para mover la pelota
+function moveBall(direction) {
+    switch (direction) {
+        case 'ArrowUp': case 'w': posY -= 40; break;
+        case 'ArrowDown': case 's': posY += 40; break;
+        case 'ArrowLeft': case 'a': posX -= 40; break;
+        case 'ArrowRight': case 'd': posX += 40; break;
     }
 
+    // Asegurarse de que el cursor no salga de la pantalla
     posX = Math.max(0, Math.min(window.innerWidth - ball.offsetWidth, posX));
     posY = Math.max(0, Math.min(window.innerHeight - ball.offsetHeight, posY));
 
     ball.style.transform = `translate(${posX}px, ${posY}px)`;
-    checkCollision();
-});
+    checkCollision(); // Verifica si hay colisiones con los niveles
+}
 
-// los valores de levelTo y levelMax se almacenan
-let levelMax = parseInt(localStorage.getItem("levelMax")) || 0;  // Nivel más alto alcanzado
-let LevelTo = parseInt(localStorage.getItem("LevelTo")) || 1;  // Próximo nivel a jugar
-
-
+// Función para detectar colisiones con los niveles
 function checkCollision() {
     let isCollision = false;
 
@@ -73,8 +89,7 @@ function checkCollision() {
     }
 }
 
-
-// esto desbloquea hasta el nivel maximo 
+// Desbloquear los niveles hasta el nivel máximo alcanzado
 function unlockLevels() {
     levels.forEach(level => {
         const levelNum = parseInt(level.getAttribute('data-level'));
@@ -85,9 +100,6 @@ function unlockLevels() {
         }
     });
 }
-
-
-let completedLevels = [];
 
 // Función para cargar los niveles completados desde 'db.json'
 async function loadCompletedLevels() {
@@ -108,13 +120,11 @@ loadCompletedLevels();
 playButton.addEventListener('click', () => {
     const levelNum = parseInt(levelNumber.textContent);
 
-    // Verifica si el nivel ya ha sido completado
     if (levelNum === LevelTo && !completedLevels.includes(levelNum)) {
         // Si necesitas guardar el progreso localmente:
         localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
 
         // Incrementa LevelTo para jugar el siguiente nivel
-        
         localStorage.setItem("LevelTo", LevelTo);
 
         // Redirigir a la página de preguntas del nivel
@@ -125,18 +135,16 @@ playButton.addEventListener('click', () => {
 });
 
 
+closeButton.addEventListener('click', () =>  {
+    lockedWindow.style.display = 'none';
+});
 
-// se agrega el div del final del juego
+
+
+// Mostrar mensaje de final del juego
 const endContainerElement = document.getElementById('endContainer');
-
-if(levelMax===10){
- endContainerElement.className = 'endContainer true';
+if (levelMax === 10) {
+    endContainerElement.className = 'endContainer true';
+} else {
+    endContainerElement.className = 'endContainer false';
 }
-
-else {
-    
-}
-
-
-
-
