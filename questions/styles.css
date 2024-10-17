@@ -87,6 +87,7 @@ footer {
     display: flex;
     text-align: center;
     margin:0 10%;
+    
 }
 
 .opcion {
@@ -100,6 +101,7 @@ footer {
     border-radius: 10px;
     cursor: url("../sources/mouse.png"), pointer !important;
     transition: background-color 0.3s, transform 0.3s;
+    min-width: 30%;
 }
 
 .opcion:hover {
@@ -135,10 +137,15 @@ footer {
 }
 
 /* Botón de Volver al Menú */
+.btn-menuContainer{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-end; /* Coloca el contenido en la parte inferior */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    padding: 20px;
+}
+
 .btn-menu {
-    position: absolute;
-    top: 20px;
-    left: 20px;
     background-color: rgba(0, 0, 0, 0);
     border: 2px solid rgb(255, 255, 255);
     color: #ffffff;

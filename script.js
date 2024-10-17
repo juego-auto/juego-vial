@@ -110,10 +110,6 @@ playButton.addEventListener('click', () => {
 
     // Verifica si el nivel ya ha sido completado
     if (levelNum === LevelTo && !completedLevels.includes(levelNum)) {
-        // Actualiza el nivel máximo si es necesario
-       
-
-
         // Si necesitas guardar el progreso localmente:
         localStorage.setItem("completedLevels", JSON.stringify(completedLevels));
 
@@ -123,10 +119,8 @@ playButton.addEventListener('click', () => {
 
         // Redirigir a la página de preguntas del nivel
         window.location.href = 'questions/index.html';
-    } else if (completedLevels.includes(levelNum)) {
+    } else (completedLevels.includes(levelNum)); {
         alert('Ya has completado este nivel.');
-    } else {
-        alert('Este nivel está bloqueado.');
     }
 });
 
