@@ -45,6 +45,7 @@ Diseño Visual Dinámico: El fondo animado y la interfaz limpia hacen que el apr
 🚀 Cómo Jugar
 
 Usa las teclas WASD o las flechas del teclado para navegar por el menú de niveles.
+En dispositivos móviles, se puede utilizar el control táctil.
 
 Selecciona un nivel desbloqueado para comenzar. Si intentas acceder a un nivel bloqueado, se te pedirá completar los anteriores.
 
