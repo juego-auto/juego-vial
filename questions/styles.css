@@ -85,15 +85,18 @@ footer {
 }
 
 .opciones {
-    display: column;
-    flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
     margin: 10px auto;
-    width: 90%; /* Asegura que se mantenga dentro de la pantalla */
-    gap: 10px; /* Espacio entre botones */
+    width: 100%; 
+    gap: 10px; 
+    flex-wrap: wrap; 
 }
 
 .opcion {
-    background-color: #4CAF50; /* Verde normal */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -101,10 +104,16 @@ footer {
     font-size: 18px;
     margin: 10px;
     border-radius: 10px;
-    cursor: url("../sources/mouse.png"), pointer !important;
+    cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    min-width: 30%;
-    max-width: 30%;
+    width: 30%; 
+    max-width: 300px;
+}
+
+@media (max-width: 768px) {
+    .opcion {
+        width: 100%; /* En pantallas más pequeñas, los botones ocupan todo el ancho */
+    }
 }
 
 .opcion:hover {
