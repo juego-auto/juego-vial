@@ -149,3 +149,31 @@ body:hover {
     display: inline-block; /* Ocupa solo el espacio del contenido */
 }
 
+.reiniciarCont {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Asegura la alineación vertical */
+    padding: 10px;
+}
+
+#reiniciarBtn {
+    position: fixed;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
+    color: #ffffff;
+    padding: 10px 20px; /* Corrige el padding */
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    min-width: 100px;
+    
+}
+
+#reiniciarBtn:hover {
+    background-color: #be4039; /* Amarillo más oscuro al pasar el cursor */
+    transform: scale(1.05);
+    transform: scale(1.2); /* Agranda el texto en un 20% */
+}
+

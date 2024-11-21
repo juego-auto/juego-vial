@@ -148,3 +148,18 @@ if (levelMax === 10) {
 } else {
     endContainerElement.className = 'endContainer false';
 }
+
+const reiniciarBtn = document.getElementById("reiniciarBtn")
+
+
+
+function levelReset () {
+    localStorage.setItem("levelMax", 0)
+    localStorage.setItem("completedLevels", 0)
+    localStorage.setItem("LevelTo", 1);
+    localStorage.setItem("LevelMax", 0);
+
+    location.reload()
+}
+
+reiniciarBtn.addEventListener('click', levelReset);
